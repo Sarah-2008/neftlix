@@ -1,0 +1,86 @@
+{
+  "name": "Content",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Title of the movie or show"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "movie",
+        "series"
+      ],
+      "description": "Type of content"
+    },
+    "genre": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Genres"
+    },
+    "year": {
+      "type": "number",
+      "description": "Release year"
+    },
+    "rating": {
+      "type": "string",
+      "description": "Age rating (e.g. 16+, 18+)"
+    },
+    "duration": {
+      "type": "string",
+      "description": "Duration or number of seasons"
+    },
+    "description": {
+      "type": "string",
+      "description": "Synopsis"
+    },
+    "cast": {
+      "type": "string",
+      "description": "Main cast members"
+    },
+    "image_url": {
+      "type": "string",
+      "description": "Poster/thumbnail image URL"
+    },
+    "banner_url": {
+      "type": "string",
+      "description": "Wide banner image URL"
+    },
+    "match_percentage": {
+      "type": "number",
+      "description": "Match percentage for user"
+    },
+    "is_trending": {
+      "type": "boolean",
+      "description": "Is this content trending"
+    },
+    "is_featured": {
+      "type": "boolean",
+      "description": "Featured on hero banner"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "trending",
+        "popular",
+        "new_releases",
+        "action",
+        "comedy",
+        "drama",
+        "horror",
+        "documentary",
+        "sci_fi",
+        "romance"
+      ],
+      "description": "Primary category"
+    }
+  },
+  "required": [
+    "title",
+    "type",
+    "image_url"
+  ]
+}
